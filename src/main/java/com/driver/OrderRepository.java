@@ -6,10 +6,17 @@ import java.util.*;
 
 @Repository
 public class OrderRepository {
-    HashMap<String, Order> ordersMap = new HashMap<>();
-    HashMap<String, DeliveryPartner> deliveryPartnerMap= new HashMap<>();
-    HashMap<String, List<String>> partnerOrdersMap = new HashMap<>();
-    HashMap<String, String> orderPartnerPairMap= new HashMap<>();
+    HashMap<String, Order> ordersMap;
+    HashMap<String, DeliveryPartner> deliveryPartnerMap;
+    HashMap<String, List<String>> partnerOrdersMap;
+    HashMap<String, String> orderPartnerPairMap;
+
+    public OrderRepository(){
+        this.ordersMap = new HashMap<>();
+        this.deliveryPartnerMap= new HashMap<>();
+        this.partnerOrdersMap = new HashMap<>();
+        this.orderPartnerPairMap= new HashMap<>();
+    }
 
 
     public void addOrder(Order order) {
